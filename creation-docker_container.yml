@@ -1,0 +1,19 @@
+--- 
+
+- name: creation de container
+  hosts: dockerHost
+  become_user: yes
+
+  task:
+
+
+- name: creation container "{{name-container}}"
+  docker_container:
+    name: myapplication
+    image: "{{name-container}}"
+    state: "{{state}}"
+    ports:
+    - "8080:80"
+    detach: true
+      
+    

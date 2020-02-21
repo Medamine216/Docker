@@ -1,0 +1,14 @@
+--- 
+
+- name: creation d'image
+  hosts: dockerHost
+  become_user: yes
+
+  task:
+
+  - name: Build image
+    docker_image:
+      build:
+        path: "{{path_image}}"
+      name: "{{nom_image_docker}}"
+      tag: "{{tag_image}}"

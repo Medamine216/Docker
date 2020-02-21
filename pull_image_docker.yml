@@ -1,0 +1,13 @@
+---
+
+- name: pull centos image
+  hosts: dockerHost
+  become_user: yes
+
+
+  tasks:
+
+  - name: recuperer l'image docker
+    docker_image:
+      name: "{{nom_image}}"
+      source: "{{nom_de_source}}"

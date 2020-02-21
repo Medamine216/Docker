@@ -1,0 +1,14 @@
+--- 
+
+#pull_image_dockeryml
+nom_image: "pacur/centos-7"
+nom_de_source: "pull"
+
+#cretion-docker_image
+path_image: "/root/docker"
+nom_image_docker: "webimage"
+tag_image: "v1"
+
+#creation-docker_container
+name-container: "{{webimage}}"
+state: "{{started}}"
